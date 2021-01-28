@@ -1,0 +1,279 @@
+* {
+    font-family: 'Lobster', cursive;
+}
+
+body {
+    background-color: #FFD78A;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.container {
+    width: 99%;
+    background-color: #47304A;
+}
+
+.block-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 99%;
+}
+h1 {
+    color: #FFFDFF;
+    font-size: 4vw;
+    margin: 0;
+    padding: 2%;
+
+}
+.block-input {
+    display: flex;
+    justify-content: center;
+    width: 99%;
+    padding-bottom: 2%;
+}
+#data-input {
+    width: 30%;
+    font-size: 1.5vw;
+    color: #47304A;
+    border-radius: 5px;
+    margin: 5px;
+    padding-left: 5px;
+}
+#date-input {
+    width: 15%;
+    font-size: 1.5vw;
+    color: #47304A;
+    border-radius: 5px;
+    margin: 5px;
+}
+.btn-add {
+    width: 5%;
+    height: 2.6vw;
+    font-size: 1.1vw;
+    border-radius: 5px;
+    color: #47304A;
+    background-color: #FFFDFF;
+    cursor: pointer;
+    margin: 5px;
+}
+.block-column {
+    display: flex;
+    justify-content: center;
+    width: 99%;
+    margin: 0;
+}
+.task {
+    width: 85%;
+    height: 80%;
+    background-color: #FFF5EE;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    overflow-x: scroll;
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    font-size: 1.2vw;
+    color: #47304A;
+    margin-left: 1%;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    background: #eee;
+    transition: 0.2s;
+}
+.closeBtn {
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    border: none;
+    background-image: url('img/icons8-удалить-16.png');
+    transition: all linear 0.3s;
+    opacity: 0;
+}
+.block-to-do {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    background-image: url('img/fon1.jpg@1X.png');
+    border-radius: 5px;
+}
+.header-to-do {
+    width: 80%;
+    font-size: 1.5em;
+    color: #FFFDFF;
+    border-radius: 5px;
+    background-color: #47304A;
+    padding: 2%;
+}
+.btn-transever {
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: none;
+    background-image: url('img/icons8-двойная-стрелка-вправо-16.png');
+    margin-left: 5%;
+    transition: all linear 0.3s;
+    opacity: 0;
+}
+.delete-message {
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    background-image: url('img/icons8-удалить-16.png');
+}
+.block-progress {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    background-image: url('img/fon2.jpg@1X.png');
+    border-radius: 5px;
+    margin: 0 1% 0 1%;
+}
+.header-progress {
+    width: 80%;
+    font-size: 1.5em;
+    color: #47304A;
+    border-radius: 5px;
+    background-color:#FFFDFF;
+    padding: 2%;
+
+}
+.block-done {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    background-image: url('img/fon3.jpg@1X.png');
+    border-radius: 5px;
+}
+.header-done {
+    width: 80%;
+    font-size: 1.5em;
+    color: #FFFDFF;
+    border-radius: 5px;
+    background-color: #47304A;
+    padding: 2%;
+}
+
+.block-btn-clear {
+    display: flex;
+    justify-content: center;
+    width: 99%;
+}
+.clear {
+    width: 10%;
+    font-size: 1.5vw;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #47304A;
+    background-color: #FFFDFF;
+    margin: 1% 9% 1% 9%;
+}
+.line {
+    width: 85%;
+    margin: 0;
+}
+
+
+::-webkit-scrollbar {
+    width: 4px;
+    background-color: transparent ;
+    opacity: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 4px;
+    background-color: #47304A;
+    border-radius: 2px;
+}
+button:hover {
+    color:blue;
+    background-color: #bbb;
+}
+
+ul li:hover {
+    background: #ddd;
+}
+.list-data:hover .closeBtn {
+    opacity: 0,5;
+}
+.list-data:hover .closeBtn {
+    opacity: 1;
+}
+.list-data:hover .btn-transever {
+    opacity: 0,5;
+}
+.list-data:hover .btn-transever {
+    opacity: 1;
+}
+
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+/*модальное окно*/
+.container-window-quantity {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+
+.container-window-delete {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+
+}
+.container-window-clearAll {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+
+.modal-window {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 260px;
+    background-color: grey;
+    font-size: 1.5vw;
+    border: 1px solid silver;
+    padding: 2%;
+    margin-top: 10%;
+}
+.btn-window {
+    cursor: pointer;
+    color: #47304A;
+    background-color: #FFFDFF;
+    font-size: 1.5vw;
+    margin-bottom: 5%;
+    border-radius: 5px;
+}
